@@ -9,9 +9,14 @@ output "server_arn" {
 output "vpc_id" {
   value = aws_vpc.main.id
 }
-output "subnet_id" {
-  value = aws_subnet.web_subnet.id
+
+output "public_subnet_id" {
+  value = aws_subnet.public.id
 }
-output "instance_public_ip" {
-  value = aws_instance.webserver.public_ip
+
+output "private_subnet_ids" {
+  value = [
+    aws_subnet.private_a.id,
+    aws_subnet.private_b.id
+  ]
 }

@@ -9,8 +9,8 @@ output "vpc_id" {
     value = module.website.vpc_id
 }
 output "subnet_id" {
-    value = module.website.subnet_id
+    value = module.website.public_subnet_id
 }
-output "instance_public_ip" {
-    value = module.website.instance_public_ip
+output "private_subnet_ids" {
+    value = module.website.private_subnet_ids
 }
